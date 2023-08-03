@@ -21,9 +21,66 @@ body{
 
 $box-shadow : 0px 0px 20px 10px #ddd ;
 
+$border : 1px solid #ddd ; 
+
+
+
+
 .App{
     min-height: 2000px;
 }
+
+
+@mixin pad {
+    padding: 4px 8px ;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.btn{
+    width:40px ;
+    height: 40px;
+    border-radius: 7px;
+    border: $border ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        color: red;
+    }
+}
+
+h1.cen{
+    animation: spin 3s forwards infinite ;
+    text-align: center;
+    color:#fac9c9;
+    margin: 35px 0px;
+    span{
+        color:#fac9c9;
+    }
+    i{
+        color: red;
+    }
+}
+
+
+@keyframes spin {
+    20%{
+        transform: rotatex(90deg);
+        transform-origin: top;
+        transform: rotatey(90deg);
+    }
+    50%{
+        transform: rotateX(90deg);
+    }
+
+    70%{
+        transform: skew(15deg , 15deg);
+        transform-origin: bottom;
+    }
+}
+
 
 // Header
 
@@ -196,4 +253,13 @@ $box-shadow : 0px 0px 20px 10px #ddd ;
 }
 
 // home 
+
+
+// deals
+
+.deals{
+    overflow: hidden;
+}
+
+// deals
 
