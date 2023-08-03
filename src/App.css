@@ -26,10 +26,21 @@ body {
   min-height: 2000px;
 }
 
+.pad {
+  border-radius: 20px;
+  padding: 4px 8px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+}
+
 .btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
   border: 1px solid #ddd;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,6 +51,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .btn i {
   color: red;
@@ -267,5 +279,96 @@ h1.cen i {
   }
 }
 .deals {
+  padding-bottom: 70px;
+  background-color: #ddd;
   overflow: hidden;
+}
+.deals .container .slick-slide > div {
+  margin: 0px 10px;
+}
+.deals .container .slick {
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  padding: 10px;
+}
+.deals .container .slick .img {
+  height: 250px;
+}
+.deals .container .slick .img img {
+  width: 100%;
+  height: 100%;
+}
+.deals .container .slick .pad {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.deals .container .slick > p {
+  font-style: oblique;
+  margin-bottom: 2px;
+}
+.deals .container .slick .stars i {
+  color: orange;
+  margin: 0px 2px;
+}
+.deals .container .slick .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.deals .container .slick .flex p {
+  color: red;
+  font-weight: bold;
+}
+.deals .container .next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  margin-top: 20px;
+  left: 53%;
+  cursor: pointer;
+}
+.deals .container .next i {
+  color: red;
+}
+.deals .container .prev {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  right: 50%;
+  bottom: -50px;
+  cursor: pointer;
+}
+.deals .container .prev i {
+  color: red;
 }

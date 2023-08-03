@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-const Sdata = [
+const Hdata = [
   {
     id: 1,
     title: "30% Off For Your First Shopping",
@@ -48,7 +48,7 @@ export default function Home() {
 <div className="home">
   <div className="container">
     <Slider {...settings} >
-    {Sdata.map(box => {
+    {Hdata.map(box => {
       return (
         <div className="box" key={box.id} >
           <div className="con">
