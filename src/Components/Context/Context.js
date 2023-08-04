@@ -1,37 +1,38 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useContext } from "react";
 import { data } from "../Deals/Deals";
 
 
-const {pro} = data ;
 
 
 
 const productContext = createContext();
 
 export const Context = ({ children }) => {
-  const [cartItem, setCartItem] = useState([]);
+  const [CartItem, setCartItem] = useState([]);
 
 
   const addToCart = (product) => {
-     let isProduct = cartItem.find((item) => item.id === product.id);
-     if (isProduct) {
-       setCartItem(cartItem.map(item => item.id === product.id ? { ...isProduct, qty: isProduct.qty + 1 } : item  ));
-      }
-      console.log(cartItem);
-  };
+    const isPro = product.find((item) => item.id === data.id)
+
+    if (isPro) {
+      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...isPro, qty: isPro.qty + 1 } : item)))
+    } 
+  }
 
   const decrementQty = (pro) => {
-    const isProduct = cartItem.find((item) => item.id === pro.id);
+    const isProduct = CartItem.find((item) => item.id === pro.id);
     if (isProduct.qty === 1) {
-      setCartItem(cartItem.filter((item) => item.id !== pro.id));
+      setCartItem(CartItem.filter((item) => item.id !== pro.id));
     } else {
-      setCartItem(cartItem.map((item) => item.id === pro.id ? { ...isProduct, qty: isProduct.qty - 1 } : item));
+      setCartItem(CartItem.map((item) => item.id === pro.id ? { ...isProduct, qty: isProduct.qty - 1 } : item));
     }
   };
 
+
+
   return (
-    <productContext.Provider value={{ addToCart, decrementQty, cartItem }}>
+    <productContext.Provider value={{ addToCart, decrementQty, CartItem }}>
       {children}
     </productContext.Provider>
   );

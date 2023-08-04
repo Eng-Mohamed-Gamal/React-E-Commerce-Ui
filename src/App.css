@@ -69,11 +69,11 @@ h1.cen {
   -webkit-animation: spin 3s forwards infinite;
           animation: spin 3s forwards infinite;
   text-align: center;
-  color: #fac9c9;
+  color: #fd9696;
   margin: 35px 0px;
 }
 h1.cen span {
-  color: #fac9c9;
+  color: #fd9696;
 }
 h1.cen i {
   color: red;

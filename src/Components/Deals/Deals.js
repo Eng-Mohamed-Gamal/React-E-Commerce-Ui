@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useProductsContext } from "../Context/Context";
 
 export const data = [
-
-
   {
     id: 1,
     discount: 50,
@@ -115,7 +113,6 @@ export default function Deals() {
   return (
     <div className="deals">
       <h1 className="cen">
-        {" "}
         <i class="fa-solid fa-bolt"></i> Flash <span>Deals</span>{" "}
       </h1>
       <div className="container">
@@ -137,7 +134,7 @@ export default function Deals() {
                 </div>
                 <div className="flex">
                   <p>{box.price}.00</p>
-                  <button className="btn" onClick={ () => addToCart(data)  }>
+                  <button className="btn" onClick={() => addToCart(data)}>
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useProductsContext } from "../../Components/Context/Context";
 
 export default function Header() {
-  const { cartItem } = useProductsContext();
+  const { CartItem } = useProductsContext();
   return (
     <div className="header">
       <div className="container">
@@ -19,7 +19,7 @@ export default function Header() {
             <li>
               <NavLink to={"/Cart"}>
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span>{cartItem.length === 0 ? 0 : cartItem.length}</span> 
+                <span>{CartItem.length === 0 ? 0 : CartItem.length}</span> 
               </NavLink>
             </li>
           </ul>
