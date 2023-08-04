@@ -4,7 +4,6 @@ import { useProductsContext } from "../../Components/Context/Context";
 
 export default function Header() {
   const { cartItem } = useProductsContext();
-  console.log(cartItem);
   return (
     <div className="header">
       <div className="container">

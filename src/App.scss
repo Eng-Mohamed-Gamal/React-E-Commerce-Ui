@@ -51,6 +51,13 @@ $border : 1px solid #ddd ;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover{
+        background-color: red;
+        i{
+            color: white;
+        }
+    }
     i{
         color: red;
     }

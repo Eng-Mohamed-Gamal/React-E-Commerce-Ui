@@ -4,52 +4,57 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useProductsContext } from "../Context/Context";
 
-export const data = {
-  pro: [
-    {
-      id: 1,
-      discount: 50,
-      cover: "./images/flash/flash-1.png",
-      name: "Shoes",
-      price: 100,
-    },
-    {
-      id: 2,
-      discount: 40,
-      cover: "./images/flash/flash-2.png",
-      name: "Watch",
-      price: 20,
-    },
-    {
-      id: 3,
-      discount: 40,
-      cover: "./images/flash/flash-3.png",
-      name: "Smart Mobile Black",
-      price: 200,
-    },
-    {
-      id: 4,
-      discount: 40,
-      cover: "./images/flash/flash-4.png",
-      name: "Smart Watch Black",
-      price: 50,
-    },
-    {
-      id: 5,
-      discount: 50,
-      cover: "./images/flash/flash-5.png",
-      name: "glass",
-      price: 100,
-    },
-    {
-      id: 6,
-      discount: 50,
-      cover: "./images/slidecard/slide-3.png",
-      name: "Shoes",
-      price: 100,
-    },
-  ],
-};
+export const data = [
+
+
+  {
+    id: 1,
+    discount: 50,
+    cover: "./images/flash/flash-1.png",
+    name: "Shoes",
+    price: 100,
+  },
+  {
+    id: 2,
+    discount: 40,
+    cover: "./images/flash/flash-2.png",
+    name: "Watch",
+    price: 20,
+  },
+  {
+    id: 3,
+    discount: 40,
+    cover: "./images/flash/flash-3.png",
+    name: "Smart Mobile Black",
+    price: 200,
+  },
+  {
+    id: 4,
+    discount: 40,
+    cover: "./images/flash/flash-4.png",
+    name: "Smart Watch Black",
+    price: 50,
+  },
+  {
+    id: 5,
+    discount: 50,
+    cover: "./images/flash/flash-5.png",
+    name: "glass",
+    price: 100,
+  },
+  {
+    id: 6,
+    discount: 50,
+    cover: "./images/slidecard/slide-3.png",
+    name: "Jacket",
+    price: 100,
+  },
+
+]
+
+
+;
+
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -115,7 +120,7 @@ export default function Deals() {
       </h1>
       <div className="container">
         <Slider {...settings}>
-          {data.pro.map((box) => {
+          {data.map((box) => {
             return (
               <div className="slick" key={box.id}>
                 <div className="pad">{box.discount}% off</div>
@@ -132,7 +137,7 @@ export default function Deals() {
                 </div>
                 <div className="flex">
                   <p>{box.price}.00</p>
-                  <button className="btn" onClick={() => addToCart(data.pro)}>
+                  <button className="btn" onClick={ () => addToCart(data)  }>
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
