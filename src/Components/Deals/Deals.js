@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-const data =  [
+  export const data =  [
       {
         id: 1,
         discount: 50,
@@ -47,6 +47,8 @@ const data =  [
         price: 100,
       },
     ]
+
+    
   
 function SampleNextArrow(props) {
     const {onClick} = props

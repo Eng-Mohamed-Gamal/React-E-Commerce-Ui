@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+
 const Hdata = [
   {
     id: 1,
@@ -32,6 +33,7 @@ const Hdata = [
 
 
 export default function Home() {
+
 
   const settings = {
     dots: true,
