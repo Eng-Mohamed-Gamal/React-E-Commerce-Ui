@@ -1,41 +1,44 @@
 import { createContext, useEffect, useState } from "react";
 import { useContext } from "react";
-import { data } from "../Deals/Deals";
-
-
-
+import { Data } from "../Deals/Deals";
 
 
 const productContext = createContext();
 
+const defaultValue =  () => {
+  let cart = {} ;
+  for (let i = 1 ; i <= Data.length ; i++) {
+    cart[i] = 0
+  }
+  return cart ;
+}
+
+
+
 export const Context = ({ children }) => {
-  const [CartItem, setCartItem] = useState([]);
-
-
-  const addToCart = (product) => {
-    const isPro = product.find((item) => item.id === data.id)
-
-    if (isPro) {
-      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...isPro, qty: isPro.qty + 1 } : item)))
-    } 
+  const [CartItem, setCartItem] = useState(defaultValue());
+  
+  const addToCart = (id)=> {
+    setCartItem((prev) => ({...prev , [id] : prev[id] + 1}) )
+    console.log(CartItem)
+  }
+  const removeFromCart = (id)=> {
+    setCartItem((prev) => ({...prev , [id] : prev[id]-1}) )
+  }
+  const addToCartByValue = (id , value) => {
+    setCartItem((prev) => ({...prev , [id] : value}) )
+  }
+  const clear = ()=> {
+    setCartItem(defaultValue())
   }
 
-  const decrementQty = (pro) => {
-    const isProduct = CartItem.find((item) => item.id === pro.id);
-    if (isProduct.qty === 1) {
-      setCartItem(CartItem.filter((item) => item.id !== pro.id));
-    } else {
-      setCartItem(CartItem.map((item) => item.id === pro.id ? { ...isProduct, qty: isProduct.qty - 1 } : item));
-    }
-  };
+return (
+  <productContext.Provider value={{CartItem , addToCart , removeFromCart , addToCartByValue , clear}}>
+    {children}
+  </productContext.Provider>
+)
+  
 
-
-
-  return (
-    <productContext.Provider value={{ addToCart, decrementQty, CartItem }}>
-      {children}
-    </productContext.Provider>
-  );
 };
 
 export const useProductsContext = () => {

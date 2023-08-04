@@ -19,7 +19,7 @@ export default function Header() {
             <li>
               <NavLink to={"/Cart"}>
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span>{CartItem.length === 0 ? 0 : CartItem.length}</span> 
+                <span></span> 
               </NavLink>
             </li>
           </ul>

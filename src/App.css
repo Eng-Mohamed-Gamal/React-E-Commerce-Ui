@@ -22,10 +22,6 @@ body {
   margin: auto;
 }
 
-.App {
-  min-height: 2000px;
-}
-
 .pad {
   border-radius: 20px;
   padding: 4px 8px;
@@ -125,8 +121,8 @@ h1.cen i {
   position: sticky;
   top: 0%;
   z-index: 100;
-  -webkit-box-shadow: 0px 0px 20px 10px #ddd;
-          box-shadow: 0px 0px 20px 10px #ddd;
+  -webkit-box-shadow: 0px 0px 20px 0px #ddd;
+          box-shadow: 0px 0px 20px 0px #ddd;
 }
 .header .flex {
   display: -webkit-box;
@@ -381,4 +377,21 @@ h1.cen i {
 }
 .deals .container .prev i {
   color: red;
+}
+
+.cart {
+  background-color: #ddd;
+  min-height: 100vh;
+}
+.cart .container {
+  padding-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 10px;
+}
+.cart .container .all {
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 20px 0px #ddd;
+          box-shadow: 0px 0px 20px 0px #ddd;
 }
