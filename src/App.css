@@ -346,7 +346,7 @@ h1.cen i {
           align-items: center;
   border-radius: 50%;
   margin-top: 20px;
-  left: 53%;
+  left: 51%;
   cursor: pointer;
 }
 .deals .container .next i {
@@ -367,7 +367,7 @@ h1.cen i {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50%;
-  right: 50%;
+  right: 51%;
   bottom: -50px;
   cursor: pointer;
 }

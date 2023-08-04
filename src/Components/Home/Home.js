@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const Hdata = [
+ export const Hdata = [
   {
     id: 1,
     title: "30% Off For Your First Shopping",
