@@ -4,7 +4,6 @@ import './App.css';
 import Header from './common/Header/Header';
 import Cart from './Components/Cart/Cart';
 import All from './Components/All/All';
-import { useState } from 'react';
 import Footer from './common/Footer/Footer';
 
 function App() {
