@@ -199,8 +199,8 @@ export default function Deals() {
                 </div>
                 <div className="flex">
                   <p>{box.price}.00</p>
-                  <button className="btn" >
-                    <i class="fa-solid fa-plus" onClick={() => addToCart(box.id)}   ></i>
+                  <button className="btn" onClick={() => addToCart(box.id)}  >
+                    <i class="fa-solid fa-plus"   ></i>
                   </button>
                 </div>
               </div>

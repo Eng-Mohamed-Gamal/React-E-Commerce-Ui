@@ -33,6 +33,7 @@ body {
 }
 
 .btn {
+  padding: 0%;
   width: 30px;
   height: 30px;
   background-color: white;
@@ -66,7 +67,8 @@ h1.cen {
           animation: spin 3s forwards infinite;
   text-align: center;
   color: #fd9696;
-  margin: 35px 0px;
+  padding: 35px 0px;
+  margin: 0%;
 }
 h1.cen span {
   color: #fd9696;
@@ -382,6 +384,7 @@ h1.cen i {
 .cart {
   background-color: #ddd;
   min-height: 100vh;
+  overflow: hidden;
 }
 .cart .container {
   padding-top: 30px;
@@ -391,7 +394,108 @@ h1.cen i {
   gap: 10px;
 }
 .cart .container .all {
+  height: auto;
+  padding-bottom: 30px;
   background-color: white;
   -webkit-box-shadow: 0px 0px 20px 0px #ddd;
           box-shadow: 0px 0px 20px 0px #ddd;
+  border-radius: 20px;
+}
+.cart .container .all .img {
+  position: relative;
+}
+.cart .container .all .img img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cart .container .all .flex {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cart .container .all .flex .one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cart .container .all .flex .one .con p:first-of-type {
+  font-weight: 900;
+  color: red;
+}
+.cart .container .all .flex .one .con p:nth-of-type(2) {
+  font-weight: bold;
+}
+.cart .container .all .flex .one .con p:nth-of-type(2) span {
+  color: red;
+}
+.cart .container .all .flex .two {
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clear {
+  text-align: center;
+}
+.clear button {
+  padding: 8px 0px;
+  width: 90%;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #fd9696;
+  cursor: pointer;
+}
+.clear:nth-of-type(2) {
+  margin: 30px 0px;
+}
+
+@media (max-width: 900px) {
+  .cart .container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .cart .container .all .flex .two {
+    padding-bottom: 12px;
+    width: 130px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .cart .container .all .flex .two input {
+    width: 60px;
+  }
+  .cart .container .all .flex .two input::-webkit-input-placeholder {
+    color: white;
+  }
+  .cart .container .all .flex .two input::-moz-placeholder {
+    color: white;
+  }
+  .cart .container .all .flex .two input:-ms-input-placeholder {
+    color: white;
+  }
+  .cart .container .all .flex .two input::-ms-input-placeholder {
+    color: white;
+  }
+  .cart .container .all .flex .two input::placeholder {
+    color: white;
+  }
 }
