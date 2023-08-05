@@ -3,6 +3,7 @@ import Home from '../Home/Home'
 import Deals from '../Deals/Deals'
 import Cate from '../Cate/Cate'
 import Arrivals from '../Arrivals/Arrivals'
+import Discount from '../Discount/Discount'
 
 export default function All({addToCart}) {
   return (
@@ -11,6 +12,7 @@ export default function All({addToCart}) {
     <Deals></Deals>
     <Cate></Cate>
     <Arrivals></Arrivals>
+    <Discount></Discount>
  </div>
   )
 }

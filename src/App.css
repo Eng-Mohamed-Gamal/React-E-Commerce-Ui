@@ -555,7 +555,7 @@ h1.cen i {
 .arrive {
   background-color: #ddd;
   margin-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 .arrive .container {
   display: -ms-grid;
@@ -590,6 +590,47 @@ h1.cen i {
        object-fit: contain;
   }
   .arrive .container .box h4, .arrive .container .box p {
+    text-align: center;
+  }
+}
+.discount {
+  background-color: white;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.discount .container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  border-radius: 20px;
+}
+.discount .container .box {
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 10px;
+}
+.discount .container .box img {
+  width: 90%;
+  height: 150px;
+  border-radius: 10px;
+}
+.discount .container .box h4 {
+  margin: 0;
+}
+.discount .container .box p {
+  margin: 0;
+  font-weight: bold;
+  color: #fd9696;
+}
+
+@media (max-width: 473px) {
+  .discount .container .box img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .discount .container .box h4, .discount .container .box p {
     text-align: center;
   }
 }

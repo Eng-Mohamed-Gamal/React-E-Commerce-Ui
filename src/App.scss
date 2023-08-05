@@ -525,7 +525,7 @@ h1.cen {
             }
         }
     }
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 @media (max-width : 463px) {
@@ -545,4 +545,54 @@ h1.cen {
 }
 
 // Arrive
+
+
+// Discount
+.discount{
+    background-color: white;
+    margin-top: 20px;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
+        gap: 10px;
+        border-radius: 20px;
+        .box{
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            img{
+                width: 90%;
+                height: 150px;
+                border-radius: 10px;
+            }
+            h4{
+                margin: 0;
+            }
+            p{
+                margin: 0;
+                font-weight: bold;
+                color: $color;
+            }
+        }
+    }
+    padding-bottom: 50px;
+}
+
+@media (max-width : 473px) {
+    .discount {
+        .container{
+            .box{
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+                h4,p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// Discount
 
