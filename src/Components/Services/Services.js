@@ -29,7 +29,7 @@ export default function Services() {
         <div className="container">
             {data.map((box , index) => {
                 return(
-                    <div className="box">
+                    <div className="box" key={index} >
                         <div className="icon">{box.cover}</div>
                         <h4>{box.title}</h4>
                         <p>{box.decs}</p>

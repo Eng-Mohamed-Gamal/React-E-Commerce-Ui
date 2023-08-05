@@ -18,7 +18,7 @@ export default function Cart() {
         Your Cart <span>{all <= 0 ? "Is Empty" : "Has Products"}</span>
       </h1>
       <div className="container">
-        {Data.map((item)=> {
+        {Data.map((item) => {
           if (CartItem[item.id] !== 0 && !isNaN(CartItem[item.id])) {
             return (
               <div className="all" key={item.id}>
@@ -67,7 +67,6 @@ export default function Cart() {
           <button onClick={() => clearAll()}>Clear All</button>
           <h1>Total : {all} $</h1>
         </div>
-        
       )}
     </div>
   );

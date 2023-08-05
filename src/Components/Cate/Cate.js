@@ -49,7 +49,7 @@ export default function Cate() {
         //     },
         //   },
           {
-            breakpoint: 800,
+            breakpoint: 1100,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,

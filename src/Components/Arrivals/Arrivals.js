@@ -42,7 +42,7 @@ export default function Arrivals() {
     <div className="container">
         {Ndata.map((box , index) =>{
             return (
-                <div className="box">
+                <div className="box" key={index}>
                     <img src={box.cover} alt="" />
                     <h4>{box.name}</h4>
                     <p>{box.price}$</p>
