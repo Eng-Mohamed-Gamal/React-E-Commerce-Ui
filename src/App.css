@@ -731,6 +731,7 @@ h1.cen i {
 .service {
   padding: 0px 0px 30px;
   background-color: #ddd;
+  padding-bottom: 50px;
 }
 .service .container {
   display: -ms-grid;
