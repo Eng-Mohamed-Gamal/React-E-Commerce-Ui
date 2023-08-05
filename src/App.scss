@@ -403,7 +403,10 @@ h1.cen {
     font-weight: 900;
     color: $color;
     cursor: pointer;
-  }
+}
+h1{
+    color: $color;
+}
   &:nth-of-type(2) {
     margin: 30px 0px;
   }
@@ -595,4 +598,58 @@ h1.cen {
 }
 
 // Discount
+
+// Mobile
+
+.mobile{
+    padding-bottom: 70px;
+    background-color: #ddd;
+    overflow: hidden;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+        gap: 10px;
+      .slick {
+        border: $border;
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+        padding: 10px;
+        .img {
+          height: 250px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .pad {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+        & > p {
+          font-style: oblique;
+          margin-bottom: 2px;
+        }
+        .stars {
+          i {
+            color: orange;
+            margin: 0px 2px;
+          }
+        }
+        .flex {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p {
+            color: red;
+            font-weight: bold;
+          }
+        }
+      }
+}}
+
+
+// Mobile
 

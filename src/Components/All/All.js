@@ -4,6 +4,7 @@ import Deals from '../Deals/Deals'
 import Cate from '../Cate/Cate'
 import Arrivals from '../Arrivals/Arrivals'
 import Discount from '../Discount/Discount'
+import Mobile from '../Mobile/Mobile'
 
 export default function All({addToCart}) {
   return (
@@ -13,6 +14,7 @@ export default function All({addToCart}) {
     <Cate></Cate>
     <Arrivals></Arrivals>
     <Discount></Discount>
+    <Mobile></Mobile>
  </div>
   )
 }
