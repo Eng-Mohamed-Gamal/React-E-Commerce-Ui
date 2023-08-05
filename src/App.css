@@ -728,3 +728,39 @@ h1.cen i {
     grid-template-columns: 1fr;
   }
 }
+.service {
+  padding: 0px 0px 30px;
+  background-color: #ddd;
+}
+.service .container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+.service .container .box {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.service .container .box .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  margin: 0% auto;
+}
+.service .container .box p {
+  color: #fd9696;
+  font-weight: bold;
+}
