@@ -65,7 +65,7 @@ export default function Cart() {
       {all > 0 && (
         <div className="clear">
           <button onClick={() => clearAll()}>Clear All</button>
-          <h1>Total : {all}</h1>
+          <h1>Total : {all} $</h1>
         </div>
         
       )}

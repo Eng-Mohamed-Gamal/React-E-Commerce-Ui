@@ -5,6 +5,7 @@ import Cate from '../Cate/Cate'
 import Arrivals from '../Arrivals/Arrivals'
 import Discount from '../Discount/Discount'
 import Mobile from '../Mobile/Mobile'
+import Banner from '../Banner/Banner'
 
 export default function All({addToCart}) {
   return (
@@ -15,6 +16,7 @@ export default function All({addToCart}) {
     <Arrivals></Arrivals>
     <Discount></Discount>
     <Mobile></Mobile>
+    <Banner></Banner>
  </div>
   )
 }
